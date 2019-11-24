@@ -1,10 +1,10 @@
-function[l]=binarization(DGRAY)
+function[BINARY]=binarization(DGRAY)
 tot=0;
 [a,b]=size(DGRAY);
-l=zeros(a,b);
+BINARY=zeros(a,b);
 for i=1:a
     for j=1:b
-        l(i,j)=0;
+        BINARY(i,j)=0;
     end
 end
 for i=1:a
@@ -16,14 +16,14 @@ thr=tot/(a*b);
 for i=1:a
     for j=1:b
         if DGRAY(i,j) > thr
-            l(i,j)=0;
+            BINARY(i,j)=0;
         else
-            l(i,j)=1;
+            BINARY(i,j)=1;
         end
     end
 end
 
 
 figure
-imshow(imcomplement(l));
+imshow(imcomplement(BINARY));
 end
