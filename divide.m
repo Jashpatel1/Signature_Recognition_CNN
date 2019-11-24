@@ -1,4 +1,4 @@
-function[PART,B]=divide(CROPPED)
+function[PART]=divide(CROPPED)
 resized=resize(CROPPED,[27,81]);
 figure
 imshow(resized);
