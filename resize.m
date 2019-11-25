@@ -31,3 +31,5 @@ function [resized] = resize(im, out_dims)
                        chan(in4_ind).*(delta_R).*(delta_C);
         resized(:,:,idx) = cast(tmp, class(im));
     end
+end
+
