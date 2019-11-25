@@ -1,4 +1,4 @@
-function[PART,convolute,resized]=divide(CROPPED)
+function poolreturn=divide(CROPPED)
 resized=resize(CROPPED,[27,81]);
 figure
 imshow(resized);
@@ -18,5 +18,5 @@ for i=0:2
     end
 end
 
-convolute=convolve(resized,PART(:,:,:));
+poolreturn=convolve(resized,PART(:,:,:));
 end
