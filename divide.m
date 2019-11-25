@@ -1,4 +1,4 @@
-function[PART]=divide(CROPPED)
+function[PART,convolute,resized]=divide(CROPPED)
 resized=resize(CROPPED,[27,81]);
 figure
 imshow(resized);
@@ -18,4 +18,5 @@ for i=0:2
     end
 end
 
+convolute=convolve(resized,PART(:,:,:));
 end
