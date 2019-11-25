@@ -4,7 +4,7 @@ imshow(RGB);
 DGRAY=grayscale(RGB);
 BINARY=binarization(DGRAY);
 CROPPED=autocrop(BINARY);
-[PART]=divide(CROPPED);
+[PART,convolute]=divide(CROPPED);
 
 
 [new_height,new_width]=size(CROPPED);
