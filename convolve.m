@@ -1,12 +1,6 @@
-function convolute = convolve(A, k)
+function [poolreturn] = convolve(A, k)
 [r, c] = size(A);
 [m, n, o] = size(k);
-
-for a=1:r-m+1
-    for b=1:c-n+1
-        AS(a,b)=0;
-    end
-end
 
 for l=1:27
     for i=1:r-m+1
@@ -21,3 +15,7 @@ for l=1:27
         end
     end
 end
+
+poolreturn=pool(convolute);
+end
+
