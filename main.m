@@ -4,8 +4,7 @@ imshow(RGB);
 DGRAY=grayscale(RGB);
 BINARY=binarization(DGRAY);
 CROPPED=autocrop(BINARY);
-[PART,convolute]=divide(CROPPED);
-
+poolreturn=divide(CROPPED);
 
 [new_height,new_width]=size(CROPPED);
 feature1_wtoh_ratio = new_width/new_height;
