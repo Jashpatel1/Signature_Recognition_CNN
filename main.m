@@ -1,3 +1,4 @@
+
 RGB = imread('00404004.png');
 figure
 imshow(RGB);
@@ -5,6 +6,7 @@ DGRAY=grayscale(RGB);
 BINARY=binarization(DGRAY);
 CROPPED=autocrop(BINARY);
 poolreturn=divide(CROPPED);
+
 
 [new_height,new_width]=size(CROPPED);
 feature1_wtoh_ratio = new_width/new_height;
